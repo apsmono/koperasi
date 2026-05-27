@@ -1,0 +1,22 @@
+{
+  "name": "koperasi-functions",
+  "description": "Cloud Functions (codebase: koperasi) for the koperasi project.",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "20"
+  },
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc",
+    "serve": "npm run build && firebase emulators:start --only functions:koperasi",
+    "deploy": "firebase deploy --only functions:koperasi"
+  },
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0"
+  }
+}
